@@ -7,6 +7,10 @@ from django.shortcuts import redirect, render
 from inventario.forms.registro_form import RegistroForm
 
 
+def cuentas_redirect_view(request):
+    return redirect('login')
+
+
 def registro_view(request):
     if request.method == 'POST':
         form = RegistroForm(request.POST)
